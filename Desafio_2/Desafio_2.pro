@@ -3,12 +3,14 @@ CONFIG  += c++17 console
 
 # Archivos fuente
 SOURCES += \
-    src/main.cpp
+    src/main.cpp \
+    src/Credit.cpp
 
 
 # Archivos de cabecera
 HEADERS += \
-    include/DynamicArray.hpp
+    include/DynamicArray.hpp \ 
+    include/Credit.hpp
 
 INCLUDEPATH += include
 

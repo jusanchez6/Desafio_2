@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include <DynamicArray.hpp>
+#include <Credit.hpp>
 
 
 using namespace std;
@@ -23,6 +24,15 @@ int main()
     }
 
     cout << "\n total de elementos: " << numeros.getSize() << endl;
+
+    Credit c1("Carlos", "Santana", "MUS12345");
+    c1.show();
+
+    Credit c2("Shakira", "Mebarak", "PROD9988");
+    c2.show();
+
+    // Mostrar acceso directo a los getters
+    std::cout << "Código de c2: " << c2.getCode() << std::endl;
 
     return 0;
 
