@@ -3,13 +3,12 @@
 
 #include <DynamicArray.hpp>
 #include <Credit.hpp>
+#include <Song.hpp>
 
-
-using namespace std;
 int main()
 {
-    cout << "hola desafio 2\n";
-    cout << "inciando prueba\n";
+    std::cout << "hola desafio 2\n";
+    std::cout << "inciando prueba\n";
 
     DynamicArray<int> numeros;
 
@@ -20,20 +19,34 @@ int main()
 
     for (size_t i = 0; i < numeros.getSize(); i++)
     {
-        cout << numeros[i] << " ";
+        std::cout << numeros[i] << " ";
     }
 
-    cout << "\n total de elementos: " << numeros.getSize() << endl;
+    std::cout << "\n total de elementos: " << numeros.getSize() << std::endl;
 
-    Credit c1("Carlos", "Santana", "MUS12345");
-    c1.show();
+    // Crear créditos
+    Credit* prod = new Credit("Rick", "Rubin", "PROD001");
+    Credit* mus  = new Credit("John", "Frusciante", "MUS009");
+    Credit* comp = new Credit("Anthony", "Kiedis", "COMP007");
 
-    Credit c2("Shakira", "Mebarak", "PROD9988");
-    c2.show();
+    // Crear canción
+    Song s1(10001001, "Californication", 330, "/media/red_hot_chili_peppers");
 
-    // Mostrar acceso directo a los getters
-    std::cout << "Código de c2: " << c2.getCode() << std::endl;
+    // Agregar créditos
+    s1.addProducer(prod);
+    s1.addMusician(mus);
+    s1.addComposer(comp);
 
+    // Mostrar información
+    s1.show();
+
+    // Reproducir (128 kbps)
+    s1.play(128);
+
+    // Mostrar información actualizada
+    std::cout << "\nReproducciones totales: " << s1.getPlayCount() << std::endl;
+
+    return 0;
     return 0;
 
 }
