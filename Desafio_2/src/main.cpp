@@ -4,40 +4,38 @@
 #include <Album.hpp>
 #include <Song.hpp>
 #include <Credit.hpp>
+#include <User.hpp>
 
 
 int main()
 {
-    // Crear canciones
-    Song* s1 = new Song(10001001, "Intro", 120, "/music/album1");
-    Song* s2 = new Song(10001002, "Luna", 210, "/music/album1");
-    Song* s3 = new Song(10001003, "Ocaso", 180, "/music/album1");
+     // Crear canciones
+    Song* s1 = new Song(101, "Sol de Enero", 210, "/music/sol");
+    Song* s2 = new Song(102, "Brisa Marina", 180, "/music/brisa");
+    Song* s3 = new Song(103, "Atardecer", 200, "/music/atardecer");
 
-    // Agregar créditos de ejemplo
-    s1->addComposer(new Credit("Mario", "Lopez", "COMP001"));
-    s2->addMusician(new Credit("Juan", "Perez", "MUS002"));
+    // Crear usuarios
+    User u1("andres99", true, "Bogotá", "Colombia", 20240120);
+    User u2("sofia12", false, "Medellín", "Colombia", 20240501);
 
-    // Crear álbum
-    Album a1(20001, "Noches de Verano", "Sunset Records", 0b00001001, 20230815);
+    // Configurar favoritos
+    u1.addFavorite(s1);
+    u1.addFavorite(s2);
+    u2.addFavorite(s3);
 
-    // Agregar canciones al álbum
-    a1.addSong(s1);
-    a1.addSong(s2);
-    a1.addSong(s3);
+    // Mostrar información de usuarios
+    u1.show();
+    u2.show();
 
-    // Mostrar información general
-    a1.show();
+    // Reproducir favoritos
+    u1.playFavorites(false);
+    u2.playFavorites(true);
 
-    // Probar reproducción de una canción
-    std::cout << "\nReproduciendo la segunda canción...\n";
-    a1.show();
-    a1.totalDuration();
-    s2->play(256);
-    s1->play(256);
-    s3->play(256);
+    // Seguir a otro usuario
+    u2.follow(&u1);
 
+    // Mostrar nuevamente
+    u2.show();
 
     return 0;
-    
-
 }

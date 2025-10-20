@@ -6,7 +6,9 @@ SOURCES += \
     src/main.cpp \
     src/Credit.cpp \
     src/Song.cpp \
-    src/Album.cpp
+    src/Album.cpp \
+    src/Artist.cpp \
+    src/User.cpp
 
 
 # Archivos de cabecera
@@ -14,7 +16,9 @@ HEADERS += \
     include/DynamicArray.hpp \ 
     include/Credit.hpp \
     include/Song.hpp \
-    include/Album.hpp
+    include/Album.hpp \
+    include/Artist.hpp \
+    include/User.hpp
 
 INCLUDEPATH += include
 

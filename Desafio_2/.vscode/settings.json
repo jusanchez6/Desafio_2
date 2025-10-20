@@ -3,6 +3,8 @@
     "files.associations": {
         "chrono": "cpp",
         "text_encoding": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "format": "cpp",
+        "optional": "cpp"
     }
 }
