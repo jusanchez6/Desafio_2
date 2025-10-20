@@ -3,9 +3,15 @@
 
 #include <string>
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 #include <DynamicArray.hpp>
 #include <Credit.hpp>
+
+
+#define DURATION_MS 5000
+#define DURATION_MIN 3
 
 
 class Song
