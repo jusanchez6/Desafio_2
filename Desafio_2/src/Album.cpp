@@ -7,7 +7,7 @@ Album::~Album() {
     {
         delete songs[i];
     }
-
+    
 }
 
 void Album::addSong(Song* s) {
@@ -16,15 +16,15 @@ void Album::addSong(Song* s) {
 
 
 int Album::totalDuration() const {
-
+    
     int total = 0;
-
+    
     for (size_t i = 0; i < songs.getSize(); ++i)
     {
         total += songs[i]->getDuration();
     }
 
-    return total;
+    return total;   
 }
 
 int Album::getId() const {return id; }

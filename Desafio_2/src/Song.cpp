@@ -1,8 +1,5 @@
 #include <Song.hpp>
 
-#include <thread>
-#include <chrono>
-
 Song::Song(int id, const std::string &name, int duration, const std::string &path) : id(id), duration(duration), name(name), path(path), playCount(0)
 {
 }
@@ -27,7 +24,7 @@ void Song::play(int kbps) {
     playCount++;
 
     // simulación de la duración de la canción 
-    std::this_thread::sleep_for(std::chrono::minutes(3));
+    std::this_thread::sleep_for(std::chrono::milliseconds(DURATION_MS));
     std::cout << "Reproducción finalizada (" << playCount << " reproducciones).\n";
     
 }

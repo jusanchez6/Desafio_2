@@ -19,7 +19,7 @@ public:
     void push_back(const T& value);
     void reserve(size_t n);
     void clear();
-    size_t getSize();
+    size_t getSize() const;
     T& operator[](size_t index);
     const T& operator[](size_t index) const;
 
@@ -66,7 +66,7 @@ void DynamicArray<T>::clear() {
 }
 
 template <typename T>
-size_t DynamicArray<T>::getSize() {
+size_t DynamicArray<T>::getSize() const {
     return len;
 }
 

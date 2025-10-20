@@ -17,7 +17,6 @@ private:
     unsigned int release_date;
 
 public:
-
     // constructos
     Album(int id, const std::string& name, const std::string& label, unsigned char genrer_mask, unsigned int release_date);
 
@@ -39,7 +38,5 @@ public:
 
     void show() const;
 };
-
-
 
 #endif // ALBUM_HPP
