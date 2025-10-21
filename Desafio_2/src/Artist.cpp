@@ -1,9 +1,5 @@
 #include "Artist.hpp"
 
-//  Constructor por defecto
-Artist::Artist() : id(0), age(0), name(""), country("") {}
-
-//  Constructor parametrizado
 Artist::Artist(int id, unsigned char age, const std::string& name, const std::string& country)
     : id(id), age(age), name(name), country(country) {}
 
