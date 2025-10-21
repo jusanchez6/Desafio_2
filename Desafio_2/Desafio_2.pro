@@ -11,7 +11,9 @@ SOURCES += \
     src/User.cpp \
     src/AdMessage.cpp \
     src/Database.cpp \
-    src/PlaybackSession.cpp 
+    src/PlaybackSession.cpp \
+    src/MemoryTracker.cpp \ 
+    src/GlobalNewDelete.cpp
 
 
 # Archivos de cabecera
@@ -24,7 +26,8 @@ HEADERS += \
     include/User.hpp \
     include/AdMessage.hpp \
     include/Database.hpp \
-    include/PlaybackSession.hpp
+    include/PlaybackSession.hpp \
+    include/MemoryTracker.hpp
 
 
 INCLUDEPATH += include
