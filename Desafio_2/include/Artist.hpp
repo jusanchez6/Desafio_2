@@ -15,25 +15,24 @@ private:
     DynamicArray<Album*> albums;   // Álbumes asociados al artista
 
 public:
-    // 🧱 Constructores
-    Artist();
+    // Constructores
     Artist(int id, unsigned char age, const std::string& name, const std::string& country);
 
-    // 🧹 Destructor
+    // Destructor
     ~Artist();
 
-    // 🚀 Métodos funcionales
+    // Métodos funcionales
     void addAlbum(Album* album);
     Album* getAlbum(int id);
 
-    // 🧾 Getters
+    // Getters
     int getId() const;
     unsigned char getAge() const;
     const std::string& getName() const;
     const std::string& getCountry() const;
     size_t getAlbumCount() const;
 
-    // 📜 Mostrar información general
+    // Mostrar información general (debug)
     void show() const;
 };
 
