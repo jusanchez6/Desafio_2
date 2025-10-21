@@ -39,6 +39,7 @@ public:
     const std::string& getCountry() const;
     unsigned int getSignupDate() const;
     size_t getFavoriteCount() const;
+    Song* getFavorite(size_t index);
 
 
     // test

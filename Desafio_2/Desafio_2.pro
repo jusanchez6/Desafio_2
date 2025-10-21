@@ -10,7 +10,8 @@ SOURCES += \
     src/Artist.cpp \
     src/User.cpp \
     src/AdMessage.cpp \
-    src/Database.cpp
+    src/Database.cpp \
+    src/PlaybackSession.cpp 
 
 
 # Archivos de cabecera
@@ -22,7 +23,9 @@ HEADERS += \
     include/Artist.hpp \
     include/User.hpp \
     include/AdMessage.hpp \
-    include/Database.hpp
+    include/Database.hpp \
+    include/PlaybackSession.hpp
+
 
 INCLUDEPATH += include
 
