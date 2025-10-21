@@ -4,10 +4,7 @@ Album::Album(int id, const std::string &name, const std::string &label, unsigned
 
 Album::~Album()
 {
-    for (size_t i = 0; i < songs.getSize(); ++i)
-    {
-        delete songs[i];
-    }
+    songs.clear();
 }
 
 void Album::addSong(Song *s)

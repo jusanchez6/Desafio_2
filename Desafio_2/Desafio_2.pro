@@ -9,7 +9,11 @@ SOURCES += \
     src/Album.cpp \
     src/Artist.cpp \
     src/User.cpp \
-    src/AdMessage.cpp
+    src/AdMessage.cpp \
+    src/Database.cpp \
+    src/PlaybackSession.cpp \
+    src/MemoryTracker.cpp \ 
+    src/GlobalNewDelete.cpp
 
 
 # Archivos de cabecera
@@ -20,7 +24,11 @@ HEADERS += \
     include/Album.hpp \
     include/Artist.hpp \
     include/User.hpp \
-    include/AdMessage.hpp
+    include/AdMessage.hpp \
+    include/Database.hpp \
+    include/PlaybackSession.hpp \
+    include/MemoryTracker.hpp
+
 
 INCLUDEPATH += include
 

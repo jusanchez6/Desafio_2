@@ -55,6 +55,11 @@ const std::string& User::getCountry() const {return country; }
 unsigned int User::getSignupDate() const {return signup_date; }
 size_t User::getFavoriteCount() const {return favorites.getSize(); }
 
+Song* User::getFavorite(size_t index) {
+    if (index < favorites.getSize())
+        return favorites[index];
+    return nullptr;
+}
 
 // función debug para mostrar información:
 

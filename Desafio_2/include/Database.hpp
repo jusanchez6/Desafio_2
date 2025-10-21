@@ -32,6 +32,9 @@ public:
     User* findUser(const std::string& nick);
     Song* findSong(int id);
 
+    DynamicArray<Song*>& getSongs();
+    DynamicArray<AdMessage*>& getAds();
+
     // debug
     void showSummary() const;
 };
