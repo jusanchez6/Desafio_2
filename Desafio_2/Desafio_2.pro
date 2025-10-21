@@ -8,7 +8,8 @@ SOURCES += \
     src/Song.cpp \
     src/Album.cpp \
     src/Artist.cpp \
-    src/User.cpp
+    src/User.cpp \
+    src/AdMessage.cpp
 
 
 # Archivos de cabecera
@@ -18,7 +19,8 @@ HEADERS += \
     include/Song.hpp \
     include/Album.hpp \
     include/Artist.hpp \
-    include/User.hpp
+    include/User.hpp \
+    include/AdMessage.hpp
 
 INCLUDEPATH += include
 
