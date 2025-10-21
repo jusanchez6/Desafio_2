@@ -1,41 +1,34 @@
 #include <QCoreApplication>
 #include <iostream>
 
-#include <Album.hpp>
-#include <Song.hpp>
-#include <Credit.hpp>
-#include <User.hpp>
+#include "Database.hpp"
 
 
-int main()
-{
-     // Crear canciones
-    Song* s1 = new Song(101, "Sol de Enero", 210, "/music/sol");
-    Song* s2 = new Song(102, "Brisa Marina", 180, "/music/brisa");
-    Song* s3 = new Song(103, "Atardecer", 200, "/music/atardecer");
+int main() {
+    Database db;
 
-    // Crear usuarios
-    User u1("andres99", true, "Bogotá", "Colombia", 20240120);
-    User u2("sofia12", false, "Medellín", "Colombia", 20240501);
+    // Cargar datos simulados
+    db.loadDummyData();
 
-    // Configurar favoritos
-    u1.addFavorite(s1);
-    u1.addFavorite(s2);
-    u2.addFavorite(s3);
+    // Mostrar resumen general
+    db.showSummary();
 
-    // Mostrar información de usuarios
-    u1.show();
-    u2.show();
+    // Buscar usuario existente
+    User* u = db.findUser("maria");
+    if (u) {
+        std::cout << "\n👤 Usuario encontrado: " << u->getNick()
+                  << " (" << (u->isPremium() ? "Premium" : "Standard") << ")\n";
+        u->playFavorites(false);
+    }
 
-    // Reproducir favoritos
-    u1.playFavorites(false);
-    u2.playFavorites(true);
+    // Buscar una canción
+    Song* s = db.findSong(10002);
+    if (s) {
+        std::cout << "\n🎶 Canción encontrada: " << s->getName() << std::endl;
+    }
 
-    // Seguir a otro usuario
-    u2.follow(&u1);
-
-    // Mostrar nuevamente
-    u2.show();
+    // Simular guardado
+    db.saveData();
 
     return 0;
 }

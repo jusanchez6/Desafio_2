@@ -5,10 +5,7 @@ Artist::Artist(int id, unsigned char age, const std::string& name, const std::st
 
 //  Destructor
 Artist::~Artist() {
-    // Liberar memoria de álbumes asociados (si el artista es propietario)
-    for (size_t i = 0; i < albums.getSize(); ++i) {
-        delete albums[i];
-    }
+    albums.clear();
 }
 
 //  Agregar un álbum
