@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <sstream>
 
 #include <DynamicArray.hpp>
 #include <User.hpp>
@@ -28,12 +30,15 @@ public:
 
     void loadDummyData();
     void saveData();
+    void loadFromFile(const std::string& filename);
+
 
     User* findUser(const std::string& nick);
     Song* findSong(int id);
 
     DynamicArray<Song*>& getSongs();
     DynamicArray<AdMessage*>& getAds();
+    DynamicArray<User*>& getUsers();
 
     // debug
     void showSummary() const;
