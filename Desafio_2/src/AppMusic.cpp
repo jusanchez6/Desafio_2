@@ -1,3 +1,14 @@
+/**
+ * @file AppMusic.cpp
+ * @brief Implementación de la clase AppMusic.
+ *
+ * Contiene la lógica de la aplicación, incluyendo carga de datos,
+ * menú de login y sesiones de usuario.
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
 #include <AppMusic.hpp>
 
 AppMusic::AppMusic() : currentUser(nullptr) {}

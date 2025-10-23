@@ -1,3 +1,16 @@
+/**
+ * @file PlaybackSession.cpp
+ * @brief Implementación de la clase PlaybackSession.
+ *
+ * Contiene los métodos para reproducir canciones, administrar historial,
+ * mostrar anuncios y medir métricas de la sesión.
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
+
 #include <PlaybackSession.hpp>
 
 PlaybackSession::PlaybackSession(User *u, Database *d, bool repeat)
@@ -117,7 +130,7 @@ void PlaybackSession::playFavorites(bool shuffle, int maxBack) {
             currentIndex++;
         } else if (opt == 2) {
             if (historyCount <= 1) {
-                std::cout << "⚠️ No hay canciones previas.\n";
+                std::cout << "No hay canciones previas.\n";
             } else {
                 int stepsBack;
                 std::cout << "¿Cuántas canciones desea retroceder? (máx " << maxBack << "): ";
@@ -135,7 +148,7 @@ void PlaybackSession::playFavorites(bool shuffle, int maxBack) {
                 }
             }
         } else if (opt == 3) {
-            std::cout << "⏹️  Reproducción detenida por el usuario.\n";
+            std::cout << "Reproducción detenida por el usuario.\n";
             break;
         } else {
             std::cout << "Opción inválida, avanzando...\n";
@@ -143,7 +156,7 @@ void PlaybackSession::playFavorites(bool shuffle, int maxBack) {
         }
     }
 
-    std::cout << "\n🎵 Fin de la lista de reproducción.\n";
+    std::cout << "\nFin de la lista de reproducción.\n";
 
     delete[] playlist; // liberar memoria dinámica
 }
