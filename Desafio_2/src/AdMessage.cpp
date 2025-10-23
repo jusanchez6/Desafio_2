@@ -1,3 +1,17 @@
+/**
+ * @file AdMessage.cpp
+ * @brief Implementación de la clase AdMessage.
+ *
+ * Contiene los métodos para gestionar mensajes publicitarios,
+ * incluyendo categoría, peso y visualización.
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+*/
+
+
 #include "AdMessage.hpp"
 
 AdMessage::AdMessage() : text(""), category('C'), weight(0) {}

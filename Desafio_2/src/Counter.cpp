@@ -1,3 +1,11 @@
+/**
+ * @file Counter.cpp
+ * @brief Implementación de la clase Counter.
+ *
+ * Contiene los métodos para contar operaciones o eventos dentro de la aplicación,
+ * incluyendo incremento, reinicio y visualización de métricas.
+ */
+
 #include "Counter.hpp"
 
 Counter::Counter() : count(0) {}

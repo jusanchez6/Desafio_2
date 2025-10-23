@@ -1,3 +1,15 @@
+/**
+ * @file Album.cpp
+ * @brief Implementación de la clase Album.
+ *
+ * Contiene los métodos para gestión de álbumes y sus canciones.
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
+
 #include <Album.hpp>
 
 Album::Album(int id, const std::string &name, const std::string &label, unsigned char genrer_mask, unsigned int release_date) : id(id), name(name), label(label), genrer_mask(genrer_mask), release_date(release_date) {}

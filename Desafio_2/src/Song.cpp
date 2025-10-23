@@ -1,3 +1,16 @@
+/**
+ * @file Song.cpp
+ * @brief Implementación de la clase Song.
+ *
+ * Contiene los métodos de reproducción de canciones y gestión de créditos
+ * (productores, músicos y compositores).
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
+
 #include <Song.hpp>
 
 Song::Song(int id, const std::string &name, int duration, const std::string &path) : id(id), duration(duration), name(name), path(path), playCount(0)
@@ -25,7 +38,6 @@ void Song::play(int kbps) {
 
     // simulación de la duración de la canción 
     std::this_thread::sleep_for(std::chrono::milliseconds(DURATION_MS));
-    std::cout << "Reproducción finalizada (" << playCount << " reproducciones).\n";
     
 }
 

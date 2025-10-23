@@ -1,3 +1,15 @@
+/**
+ * @file MemoryTracker.cpp
+ * @brief Implementación de la clase MemoryTracker.
+ *
+ * Contiene métodos para registrar asignaciones y liberaciones de memoria,
+ * además de mostrar reportes y métricas de uso de memoria.
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
 #include <MemoryTracker.hpp>
 
 size_t MemoryTracker::totalAllocated = 0;

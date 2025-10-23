@@ -1,3 +1,14 @@
+/**
+ * @file Artist.cpp
+ * @brief Implementación de la clase Artist.
+ *
+ * Contiene los métodos para gestión de artistas y sus álbumes.
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
 #include "Artist.hpp"
 
 Artist::Artist(int id, unsigned char age, const std::string& name, const std::string& country)

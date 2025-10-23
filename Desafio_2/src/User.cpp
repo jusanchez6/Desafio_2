@@ -1,3 +1,15 @@
+/**
+ * @file User.cpp
+ * @brief Implementación de la clase User.
+ *
+ * Contiene los métodos para gestión de usuarios, favoritos y seguimiento
+ * de otros usuarios.
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
 #include <User.hpp>
 
 User::User(const std::string& nick, bool premiumStatus, const std::string& city, const std::string& country, unsigned int signup_date) 

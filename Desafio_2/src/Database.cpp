@@ -1,3 +1,19 @@
+/**
+ * @file Database.cpp
+ * @brief Implementación de la clase Database.
+ *
+ * Gestiona la base de datos interna de la aplicación: usuarios,
+ * artistas, álbumes, canciones y anuncios.
+ * 
+ * @authors Julián Sánchez
+ *          Jaider Bedoya
+ * 
+ * @version 1.0.0
+ */
+
+#include "Database.hpp"
+
+
 #include <Database.hpp>
 
 Database::Database() {}
