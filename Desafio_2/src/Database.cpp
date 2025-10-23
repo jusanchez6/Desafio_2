@@ -26,79 +26,96 @@ Database::~Database()
     }
 }
 
-
-void Database::loadFromFile(const std::string& filename)
+void Database::loadFromFile(const std::string &filename)
 {
     std::ifstream file("dataset.txt");
 
-    if (!file.is_open()) {
+    if (!file.is_open())
+    {
         std::cerr << "No se pudo abrir el archivo: " << filename << std::endl;
         return;
     }
 
     std::string line;
-    while (std::getline(file, line)) {
-        if (line.empty() || line[0] == '#') continue;
+    while (std::getline(file, line))
+    {
+        if (line.empty() || line[0] == '#')
+            continue;
 
         std::stringstream ss(line);
         std::string token;
         std::getline(ss, token, '|');
 
-        if (token == "SONG") {
+        if (token == "SONG")
+        {
             int id, duration;
             std::string title, path;
             std::string value;
 
-            std::getline(ss, value, '|'); id = std::stoi(value);
+            std::getline(ss, value, '|');
+            id = std::stoi(value);
             std::getline(ss, title, '|');
-            std::getline(ss, value, '|'); duration = std::stoi(value);
+            std::getline(ss, value, '|');
+            duration = std::stoi(value);
             std::getline(ss, path, '|');
 
-            Song* s = new Song(id, title, duration, path);
+            Song *s = new Song(id, title, duration, path);
             songs.push_back(s);
         }
 
-        else if (token == "ALBUM") {
+        else if (token == "ALBUM")
+        {
             int id, mask, date;
             std::string title, studio, songList, value;
 
-            std::getline(ss, value, '|'); id = std::stoi(value);
+            std::getline(ss, value, '|');
+            id = std::stoi(value);
             std::getline(ss, title, '|');
             std::getline(ss, studio, '|');
-            std::getline(ss, value, '|'); mask = std::stoi(value);
-            std::getline(ss, value, '|'); date = std::stoi(value);
+            std::getline(ss, value, '|');
+            mask = std::stoi(value);
+            std::getline(ss, value, '|');
+            date = std::stoi(value);
             std::getline(ss, songList, '|');
 
-            Album* a = new Album(id, title, studio, mask, date);
+            Album *a = new Album(id, title, studio, mask, date);
 
             // Relacionar canciones
             std::stringstream songStream(songList);
             std::string sid;
-            while (std::getline(songStream, sid, ',')) {
-                Song* s = findSong(std::stoi(sid));
-                if (s) a->addSong(s);
+            while (std::getline(songStream, sid, ','))
+            {
+                Song *s = findSong(std::stoi(sid));
+                if (s)
+                    a->addSong(s);
             }
 
             albums.push_back(a);
         }
 
-        else if (token == "ARTIST") {
+        else if (token == "ARTIST")
+        {
             int id, age;
             std::string name, country, albumsStr, value;
 
-            std::getline(ss, value, '|'); id = std::stoi(value);
-            std::getline(ss, value, '|'); age = std::stoi(value);
+            std::getline(ss, value, '|');
+            id = std::stoi(value);
+            std::getline(ss, value, '|');
+            age = std::stoi(value);
             std::getline(ss, name, '|');
             std::getline(ss, country, '|');
             std::getline(ss, albumsStr, '|');
 
-            Artist* art = new Artist(id, age, name, country);
+            Artist *art = new Artist(id, age, name, country);
 
             std::stringstream albStream(albumsStr);
             std::string aid;
-            while (std::getline(albStream, aid, ',')) {
-                for (size_t i = 0; i < albums.getSize(); ++i) {
-                    if (albums[i]->getId() == std::stoi(aid)) {
+            while (std::getline(albStream, aid, ','))
+            {
+                for (size_t i = 0; i < albums.getSize(); ++i)
+                {
+                    if (albums[i]->getId() == std::stoi(aid))
+                    {
                         art->addAlbum(albums[i]);
                     }
                 }
@@ -107,49 +124,84 @@ void Database::loadFromFile(const std::string& filename)
             artists.push_back(art);
         }
 
-        else if (token == "USER") {
+        else if (token == "USER")
+        {
             std::string name, city, country, favStr, followName, value;
             bool premium;
             int date;
 
             std::getline(ss, name, '|');
-            std::getline(ss, value, '|'); premium = std::stoi(value);
+            std::getline(ss, value, '|');
+            premium = std::stoi(value);
             std::getline(ss, city, '|');
             std::getline(ss, country, '|');
-            std::getline(ss, value, '|'); date = std::stoi(value);
+            std::getline(ss, value, '|');
+            date = std::stoi(value);
             std::getline(ss, favStr, '|');
             std::getline(ss, followName, '|');
 
-            User* u = new User(name, premium, city, country, date);
+            User *u = new User(name, premium, city, country, date);
 
             // Agregar favoritos
             std::stringstream favs(favStr);
             std::string sid;
-            while (std::getline(favs, sid, ',')) {
-                Song* s = findSong(std::stoi(sid));
-                if (s) u->addFavorite(s);
+            while (std::getline(favs, sid, ','))
+            {
+                Song *s = findSong(std::stoi(sid));
+                if (s)
+                    u->addFavorite(s);
             }
 
             // Seguir a otro usuario (si ya está cargado)
-            if (!followName.empty()) {
-                User* other = findUser(followName);
-                if (other) u->follow(other);
+            if (!followName.empty())
+            {
+                User *other = findUser(followName);
+                if (other)
+                    u->follow(other);
             }
 
             users.push_back(u);
         }
 
-        else if (token == "AD") {
+        else if (token == "AD")
+        {
             char type;
             std::string msg, value;
             int weight;
 
-            std::getline(ss, value, '|'); type = value[0];
+            std::getline(ss, value, '|');
+            type = value[0];
             std::getline(ss, msg, '|');
-            std::getline(ss, value, '|'); weight = std::stoi(value);
+            std::getline(ss, value, '|');
+            weight = std::stoi(value);
 
-            AdMessage* ad = new AdMessage(msg, type, weight);
+            AdMessage *ad = new AdMessage(msg, type, weight);
             ads.push_back(ad);
+        }
+        
+        else if (token == "CREDIT")
+        {
+            int songId;
+            std::string name, surname, role, value;
+
+            std::getline(ss, value, '|');
+            songId = std::stoi(value);
+            std::getline(ss, name, '|');
+            std::getline(ss, surname, '|');
+            std::getline(ss, role, '|');
+
+            Song *song = findSong(songId);
+            if (!song)
+                continue;
+
+            Credit *c = new Credit(name, surname, role.c_str());
+
+            if (role == "composer")
+                song->addComposer(c);
+            else if (role == "producer")
+                song->addProducer(c);
+            else if (role == "musician")
+                song->addMusician(c);
         }
     }
 
@@ -190,7 +242,6 @@ void Database::loadDummyData()
     users.push_back(u1);
     users.push_back(u2);
 
-
     // Anuncios
     ads.push_back(new AdMessage("¡Suscríbete a Premium para evitar anuncios!", 'A', 10));
     ads.push_back(new AdMessage("Descubre los nuevos lanzamientos semanales.", 'B', 5));
@@ -229,11 +280,11 @@ Song *Database::findSong(int id)
     return nullptr;
 }
 
-DynamicArray<Song *> &Database::getSongs() {return songs; }
+DynamicArray<Song *> &Database::getSongs() { return songs; }
 
-DynamicArray<AdMessage *> &Database::getAds() {return ads; }
+DynamicArray<AdMessage *> &Database::getAds() { return ads; }
 
-DynamicArray<User*> &Database::getUsers() {return users; }
+DynamicArray<User *> &Database::getUsers() { return users; }
 
 void Database::showSummary() const
 {

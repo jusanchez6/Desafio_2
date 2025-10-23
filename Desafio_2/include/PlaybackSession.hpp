@@ -39,7 +39,7 @@ public:
     
     // funcionalidades
     void playRandom(int K);
-    void playFavorites(bool shuffle);
+    void playFavorites(bool shuffle, int maxBack);
 
     
 

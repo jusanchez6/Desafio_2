@@ -1,4 +1,6 @@
+# ==============================
 # Canciones
+# ==============================
 SONG|10001|Shape of You|233|/music/ShapeOfYou
 SONG|10002|Blinding Lights|200|/music/BlindingLights
 SONG|10003|Rolling in the Deep|228|/music/RollingInTheDeep
@@ -15,7 +17,9 @@ SONG|10013|As It Was|167|/music/AsItWas
 SONG|10014|Happier Than Ever|298|/music/HappierThanEver
 SONG|10015|Dance Monkey|209|/music/DanceMonkey
 
+# ==============================
 # Álbumes
+# ==============================
 ALBUM|20001|Divide (÷)|Atlantic Records|16|20170303|10001,10010
 ALBUM|20002|After Hours|XO/Republic|14|20200320|10002
 ALBUM|20003|21|XL Recordings|11|20110124|10003,10005
@@ -29,7 +33,9 @@ ALBUM|20010|Harry’s House|Columbia|13|20220520|10013
 ALBUM|20011|Happier Than Ever|Darkroom/Interscope|16|20210730|10014
 ALBUM|20012|The Kids Are Coming|Sony Music|6|20190830|10015
 
+# ==============================
 # Artistas
+# ==============================
 ARTIST|30001|33|Ed Sheeran|Reino Unido|20001
 ARTIST|30002|35|The Weeknd|Canadá|20002
 ARTIST|30003|36|Adele|Reino Unido|20003
@@ -42,14 +48,81 @@ ARTIST|30009|31|Justin Bieber|Canadá|20009
 ARTIST|30010|31|Harry Styles|Reino Unido|20010
 ARTIST|30011|29|Tones and I|Australia|20012
 
+# ==============================
+# Créditos (name|surname|role)
+# ==============================
+CREDIT|10001|Ed|Sheeran|composer
+CREDIT|10001|Steve|Mac|producer
+CREDIT|10001|Ed|Sheeran|musician
+
+CREDIT|10002|Abel|Tesfaye|composer
+CREDIT|10002|Max|Martin|producer
+CREDIT|10002|The|Weeknd|musician
+
+CREDIT|10003|Adele|Adkins|composer
+CREDIT|10003|Paul|Epworth|producer
+CREDIT|10003|Adele|Adkins|musician
+
+CREDIT|10004|Chris|Martin|composer
+CREDIT|10004|Brian|Eno|producer
+CREDIT|10004|Coldplay|Band|musician
+
+CREDIT|10005|Adele|Adkins|composer
+CREDIT|10005|Dan|Wilson|producer
+CREDIT|10005|Adele|Adkins|musician
+
+CREDIT|10006|Mark|Ronson|composer
+CREDIT|10006|Mark|Ronson|producer
+CREDIT|10006|Bruno|Mars|musician
+
+CREDIT|10007|Billie|Eilish|composer
+CREDIT|10007|Finneas|OConnell|producer
+CREDIT|10007|Billie|Eilish|musician
+
+CREDIT|10008|Dua|Lipa|composer
+CREDIT|10008|Stephen|Kozmeniuk|producer
+CREDIT|10008|Dua|Lipa|musician
+
+CREDIT|10009|Luis|Fonsi|composer
+CREDIT|10009|Andrés|Torres|producer
+CREDIT|10009|Luis|Fonsi|musician
+
+CREDIT|10010|Ed|Sheeran|composer
+CREDIT|10010|Benny|Blanco|producer
+CREDIT|10010|Ed|Sheeran|musician
+
+CREDIT|10011|Chris|Martin|composer
+CREDIT|10011|Coldplay|Band|producer
+CREDIT|10011|Coldplay|Band|musician
+
+CREDIT|10012|Justin|Bieber|composer
+CREDIT|10012|Cashmere|Cat|producer
+CREDIT|10012|The|KidLAROI|musician
+
+CREDIT|10013|Harry|Styles|composer
+CREDIT|10013|Tyler|Johnson|producer
+CREDIT|10013|Harry|Styles|musician
+
+CREDIT|10014|Billie|Eilish|composer
+CREDIT|10014|Finneas|OConnell|producer
+CREDIT|10014|Billie|Eilish|musician
+
+CREDIT|10015|Tones|andI|composer
+CREDIT|10015|Tones|andI|producer
+CREDIT|10015|Tones|andI|musician
+
+# ==============================
 # Usuarios
-USER|juanito|0|Bogotá|Colombia|20240115|10003|Maria
-USER|Maria|1|Medellín|Colombia|20240310|10001|
-USER|Angie|1|Cartagena|Colombia|20241201|10003|Julián
-USER|Julián|1|Rionegro|Colombia|20241201|10001|Angie
+# ==============================
+USER|juanito|0|Bogotá|Colombia|20240115|10003,10005,10009,10012|
+USER|Maria|1|Medellín|Colombia|20240310|10001,10002,10006,10010|
+USER|Angie|1|Cartagena|Colombia|20241201|10003,10011,10012,10004,10007,10015|Maria
+USER|Julián|1|Rionegro|Colombia|20241201|10001,10002,10008,10009,10010|Angie
 
 
+# ==============================
 # Anuncios
+# ==============================
 AD|A|¡Suscríbete a Premium para evitar anuncios!|10
 AD|B|Descubre los nuevos lanzamientos semanales.|5
 AD|C|Tu música, sin límites. Mejora tu cuenta hoy.|8

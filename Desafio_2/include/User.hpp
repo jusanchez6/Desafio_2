@@ -31,6 +31,8 @@ public:
     void playFavorites(bool shuffle = false);
     void follow(User* other);
 
+    bool isFavorite(Song* s);
+    void removeFavorite(Song* s);
 
     // getters
     bool isPremium() const;
