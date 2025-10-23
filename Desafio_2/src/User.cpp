@@ -10,7 +10,14 @@ User::~User() {
 }
 
 void User::addFavorite(Song* s) {
+
+    if (isFavorite(s)) {
+        std::cout << "\nLa canción " << s->getName() << " ya se encuentra en la lista de favoritos.\n";
+        return;
+    }
+
     favorites.push_back(s);
+    std::cout << "\nAñadido a favoritos: " << s->getName() << std::endl;
 }
 
 void User::playFavorites(bool shuffle) {
@@ -20,7 +27,6 @@ void User::playFavorites(bool shuffle) {
         return;
     }
 
-    // falta mensaje de confirmación:
     if (shuffle) {
         size_t idx = std::rand() % favorites.getSize();
         favorites[idx]->play(premium ? 320 : 128);
@@ -44,6 +50,31 @@ void User::follow(User* other) {
     }
 
     following = other;
+}
+
+bool User::isFavorite(Song* s)
+{
+    for (size_t i = 0; i < favorites.getSize(); ++i)
+    {
+        if (favorites[i] == s)
+            return true;
+    }
+    return false;
+}
+
+void User::removeFavorite(Song* s)
+{
+    for (size_t i = 0; i < favorites.getSize(); ++i)
+    {
+        if (favorites[i] == s)
+        {
+            favorites.removeAt(i); // asumiendo que DynamicArray tiene un método removeAt()
+            std::cout << "Canción removida de la lista de Favoritos: " << s->getName() << std::endl;
+            return;
+        }
+    }
+
+    std::cout << "Esta canción no se encuentra en la lista de Favoritos." << std::endl;
 }
 
 

@@ -57,7 +57,7 @@ void AppMusic::runPlayback(User *user, bool playFavorites)
     PlaybackSession session(user, &db, false);
 
     if (playFavorites)
-        session.playFavorites(true);
+        session.playFavorites(true, 3);
     else
         session.playRandom(3);
 
@@ -111,6 +111,117 @@ void AppMusic::showFavorites(User* user) {
 }
 
 
+void AppMusic::editFavorites(User* user) {
+    Counter iterCount;
+
+    std::cout << "\n=== Editar mi lista de favoritos ===\n";
+    int songId;
+    std::cout << "Ingrese el ID de la canción a buscar: ";
+    std::cin >> songId;
+
+    Song* song = db.findSong(songId);
+    iterCount.increment();
+
+    if(!song) {
+        std::cout << "Canción no encontrada.\n";
+        iterCount.showMetrics("Editar favoritos - Búsqueda fallida");
+        return;
+    }
+
+    std::cout << " - " << song->getName() << " (" << song->getDuration() << "s)\n";
+    std::cout << "¿Desea (1) Agregar o (2) Eliminar esta canción de sus favoritos? ";
+    int opt;
+    std::cin >> opt;
+
+
+    if (opt == 1) {
+        if (user->getFavoriteCount() >= 10000) {
+            std::cout << "Ha alcanzado el límite máximo de canciones favoritas (10000).\n";
+        } else if (user->isFavorite(song)) {
+            std::cout << "La canción ya está en su lista.\n";
+        } else {
+            user->addFavorite(song);
+            std::cout << "Canción agregada a favoritos.\n";
+        }
+    } else if (opt == 2) {
+        if (!user->isFavorite(song)) {
+            std::cout << "La canción no estaba en su lista.\n";
+        } else {
+            user->removeFavorite(song);
+            std::cout << "Canción eliminada de favoritos.\n";
+        }
+    } else {
+        std::cout << "Opción inválida.\n";
+    }
+
+    iterCount.showMetrics("Editar mi lista de favoritos");
+    MemoryTracker::showReport();
+
+}
+
+void AppMusic::followOtherList(User* user) {
+    Counter iterCount;
+    std::cout << "\n=== Seguir la lista de otro usuario ===\n";
+    std::cout << "Ingrese el nombre del usuario a seguir: ";
+    std::string nick;
+    std::cin >> nick;
+
+    User* other = db.findUser(nick);
+    iterCount.increment();
+
+    if (!other) {
+        std::cout << "Usuario no encontrado.\n";
+        iterCount.showMetrics("Seguir lista - Usuario no existe");
+        return;
+    }
+
+    if (other == user) {
+        std::cout << "No puede seguirse a sí mismo.\n";
+        iterCount.showMetrics("Seguir lista - Operación invalida");
+        return;
+    }
+
+    for (size_t i = 0; i < other->getFavoriteCount(); ++i) {
+        Song* song = other->getFavorite(i);
+        if (song && !user->isFavorite(song)) {
+            user->addFavorite(song);
+        }
+        iterCount.increment();
+    }
+
+    std::cout << "Ahora sigue también la lista de " << other->getNick() << ".\n";
+    iterCount.showMetrics("Seguir lista de favoritos");
+    MemoryTracker::showReport();
+}
+
+
+void AppMusic::executeFavorites(User* user) {
+    Counter iterCount;
+
+    if (user->getFavoriteCount() == 0) {
+        std::cout << "No tiene canciones en su lista de favoritos.\n";
+        return;
+    }
+
+    std::cout << "\n=== Reproducir mi lista de favoritos ===\n";
+    std::cout << "¿Desea reproducir en (1) orden original o (2) aleatorio? ";
+    int opt;
+    std::cin >> opt;
+
+    PlaybackSession session(user, &db, false);
+    const int M = 6;
+
+    if (opt == 1)
+        session.playFavorites(false, M);
+    else
+        session.playFavorites(true, M);
+
+    iterCount.increment();
+    iterCount.showMetrics("Reproducir lista de favoritos");
+    MemoryTracker::showReport();
+}
+
+
 void AppMusic::manageFavorites(User* user) {
     if (!user) {
         return;
@@ -150,7 +261,6 @@ void AppMusic::manageFavorites(User* user) {
                 break;
         }
     } while (opt != 4);
-
 
 }
 

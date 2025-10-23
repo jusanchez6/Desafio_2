@@ -64,7 +64,7 @@ void PlaybackSession::playRandom(int K) {
     }
 }
 
-void PlaybackSession::playFavorites(bool shuffle) {
+void PlaybackSession::playFavorites(bool shuffle, int maxBack) {
     if (!user) {
         std::cout << "No hay usuario logueado." << std::endl;
         return;
@@ -73,24 +73,81 @@ void PlaybackSession::playFavorites(bool shuffle) {
     std::cout << "\nReproduciendo favoritos de " << user->getNick()
               << (shuffle ? " (modo aleatorio)" : "") << std::endl;
 
-    size_t favCount = user->getFavoriteCount();
+    int favCount = user->getFavoriteCount();
     if (favCount == 0) {
         std::cout << "El usuario no tiene canciones favoritas." << std::endl;
         return;
     }
 
-    for (size_t i = 0; i < favCount; ++i) {
-        size_t index = shuffle ? (std::rand() % favCount) : i;
-        Song* s = user->getFavorite(index);
+    // Crear una copia de las canciones favoritas
+    Song** playlist = new Song*[favCount];
+    for (int i = 0; i < favCount; ++i) {
+        playlist[i] = user->getFavorite(i);
+    }
 
+    // Si se elige modo aleatorio, hacer shuffle manual
+    if (shuffle) {
+        for (int i = 0; i < favCount - 1; ++i) {
+            int j = std::rand() % favCount;
+            Song* temp = playlist[i];
+            playlist[i] = playlist[j];
+            playlist[j] = temp;
+        }
+    }
+
+    int history[10000]; // hasta 10k canciones reproducidas
+    int historyCount = 0;
+
+    int currentIndex = 0;
+    while (currentIndex < favCount) {
+        Song* s = playlist[currentIndex];
         if (s) {
             s->play(user->isPremium() ? 320 : 128);
             addToHistory(s->getId());
+            history[historyCount++] = currentIndex;
             songsPlayed++;
             maybeShowAd();
         }
+
+        std::cout << "\n¿Desea (1) siguiente, (2) retroceder, (3) salir? ";
+        int opt;
+        std::cin >> opt;
+
+        if (opt == 1) {
+            currentIndex++;
+        } else if (opt == 2) {
+            if (historyCount <= 1) {
+                std::cout << "⚠️ No hay canciones previas.\n";
+            } else {
+                int stepsBack;
+                std::cout << "¿Cuántas canciones desea retroceder? (máx " << maxBack << "): ";
+                std::cin >> stepsBack;
+
+                if (stepsBack < 1) stepsBack = 1;
+                if (stepsBack > maxBack) stepsBack = maxBack;
+
+                if (historyCount > stepsBack) {
+                    currentIndex = history[historyCount - 1 - stepsBack];
+                    historyCount -= stepsBack; // “retroceder” historial
+                } else {
+                    currentIndex = 0;
+                    historyCount = 0;
+                }
+            }
+        } else if (opt == 3) {
+            std::cout << "⏹️  Reproducción detenida por el usuario.\n";
+            break;
+        } else {
+            std::cout << "Opción inválida, avanzando...\n";
+            currentIndex++;
+        }
     }
+
+    std::cout << "\n🎵 Fin de la lista de reproducción.\n";
+
+    delete[] playlist; // liberar memoria dinámica
 }
+
 
 
 // debug

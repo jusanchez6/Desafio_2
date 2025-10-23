@@ -19,6 +19,7 @@ public:
     void push_back(const T& value);
     void reserve(size_t n);
     void clear();
+    void removeAt(size_t index);
     size_t getSize() const;
     T& operator[](size_t index);
     const T& operator[](size_t index) const;
@@ -79,6 +80,22 @@ template <typename T>
 const T& DynamicArray<T>::operator[](size_t index) const {
     return data[index];
 }
+
+template <typename T>
+void DynamicArray<T>::removeAt(size_t index) {
+    if (index >= len) {
+        std::cerr << "Fuera de rango en: " << index << "\n";
+        return;
+    }
+
+    // Desplazar los elementos hacia la izquierda
+    for (size_t i = index; i < len - 1; ++i) {
+        data[i] = data[i + 1];
+    }
+
+    --len;
+}
+
 
 
 #endif //DynamicArray.hpp
