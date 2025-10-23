@@ -49,6 +49,12 @@ public:
     unsigned int getPlayCount() const;
     int getDuration() const;
 
+    const DynamicArray<Credit*>& getProducers() const { return producers; }
+    const DynamicArray<Credit*>& getMusicians() const { return musicians; }
+    const DynamicArray<Credit*>& getComposers() const { return composers; }
+
+
+
     void show();
 
 };

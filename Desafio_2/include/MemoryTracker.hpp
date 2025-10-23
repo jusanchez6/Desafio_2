@@ -26,9 +26,12 @@ public:
     static size_t getTotalAllocated();
     static size_t getTotalFreed();
     static size_t getCurrentUsage();
+    
 
 
     static void showReport();
+    static void showCurrentUsage(const std::string& context);
+
 };
 
 #endif

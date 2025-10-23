@@ -22,9 +22,15 @@ private:
     void loadAllData();
     void loginMenu();
     void userSession();
-    void ShowFollowed(User* user);
     void showFavorites(User *user);
     void runPlayback(User* user, bool playFavorites);
+    void manageFavorites(User* user);
+
+
+    void editFavorites(User* user);
+    void followOtherList(User* user);
+    void executeFavorites(User* user);
+
 
 public:
     AppMusic();
