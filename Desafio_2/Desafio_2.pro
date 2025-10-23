@@ -3,7 +3,6 @@ CONFIG  += c++17 console
 
 # Archivos fuente
 SOURCES += \
-    src/Counter.cpp \
     src/main.cpp \
     src/Credit.cpp \
     src/Song.cpp \
@@ -11,16 +10,16 @@ SOURCES += \
     src/Artist.cpp \
     src/User.cpp \
     src/AdMessage.cpp \
-    src/Counter.cpp
+    src/Counter.cpp \
     src/Database.cpp \
     src/PlaybackSession.cpp \
     src/MemoryTracker.cpp \ 
-    src/GlobalNewDelete.cpp
+    src/GlobalNewDelete.cpp \
+    src/AppMusic.cpp
 
 
 # Archivos de cabecera
 HEADERS += \
-    include/Counter.hpp \
     include/DynamicArray.hpp \ 
     include/Credit.hpp \
     include/Song.hpp \
@@ -28,10 +27,11 @@ HEADERS += \
     include/Artist.hpp \
     include/User.hpp \
     include/AdMessage.hpp \
-    include/Counter.hpp
+    include/Counter.hpp \
     include/Database.hpp \
     include/PlaybackSession.hpp \
-    include/MemoryTracker.hpp
+    include/MemoryTracker.hpp \
+    include/AppMusic.hpp
 
 
 INCLUDEPATH += include

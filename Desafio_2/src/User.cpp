@@ -44,7 +44,6 @@ void User::follow(User* other) {
     }
 
     following = other;
-    std::cout << nickname << "Ahora sigue a " << other->getNick() << " 🎵\n";
 }
 
 
