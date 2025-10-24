@@ -29,7 +29,6 @@ void User::addFavorite(Song* s) {
     }
 
     favorites.push_back(s);
-    std::cout << "\nAñadido a favoritos: " << s->getName() << std::endl;
 }
 
 void User::playFavorites(bool shuffle) {
