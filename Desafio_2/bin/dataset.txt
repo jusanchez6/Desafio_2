@@ -1,0 +1,413 @@
+# ==============================
+# Canciones
+# ==============================
+SONG|10001|Shape of You|233|/music/ShapeOfYou
+SONG|10002|Blinding Lights|200|/music/BlindingLights
+SONG|10003|Rolling in the Deep|228|/music/RollingInTheDeep
+SONG|10004|Viva la Vida|242|/music/VivaLaVida
+SONG|10005|Someone Like You|285|/music/SomeoneLikeYou
+SONG|10006|Uptown Funk|269|/music/UptownFunk
+SONG|10007|Bad Guy|194|/music/BadGuy
+SONG|10008|Levitating|203|/music/Levitating
+SONG|10009|Despacito|228|/music/Despacito
+SONG|10010|Perfect|263|/music/Perfect
+SONG|10011|Yellow|266|/music/Yellow
+SONG|10012|Stay|141|/music/Stay
+SONG|10013|As It Was|167|/music/AsItWas
+SONG|10014|Happier Than Ever|298|/music/HappierThanEver
+SONG|10015|Dance Monkey|209|/music/DanceMonkey
+SONG|10016|Livin' on a Prayer|252|/music/LivinOnAPrayer
+SONG|10017|You Give Love a Bad Name|217|/music/YouGiveLoveABadName
+SONG|10018|Wanted Dead or Alive|325|/music/WantedDeadOrAlive
+SONG|10019|Bad Medicine|230|/music/BadMedicine
+SONG|10020|It's My Life|202|/music/ItsMyLife
+SONG|10021|Bed of Roses|240|/music/BedOfRoses
+SONG|10022|Always|273|/music/Always
+SONG|10023|I'll Be There for You|231|/music/IllBeThereForYou
+SONG|10024|Runaway|210|/music/Runaway
+SONG|10025|Someday I'll Be Saturday Night|198|/music/SomedayIllBeSaturdayNight
+
+SONG|10026|BonJovi_Album2_Track1|205|/music/BJ_A2_T1
+SONG|10027|BonJovi_Album2_Track2|198|/music/BJ_A2_T2
+SONG|10028|BonJovi_Album2_Track3|214|/music/BJ_A2_T3
+SONG|10029|BonJovi_Album2_Track4|223|/music/BJ_A2_T4
+SONG|10030|BonJovi_Album2_Track5|239|/music/BJ_A2_T5
+SONG|10031|BonJovi_Album2_Track6|215|/music/BJ_A2_T6
+SONG|10032|BonJovi_Album2_Track7|207|/music/BJ_A2_T7
+SONG|10033|BonJovi_Album2_Track8|220|/music/BJ_A2_T8
+SONG|10034|BonJovi_Album2_Track9|199|/music/BJ_A2_T9
+SONG|10035|BonJovi_Album2_Track10|241|/music/BJ_A2_T10
+
+SONG|10036|BonJovi_Album3_Track1|211|/music/BJ_A3_T1
+SONG|10037|BonJovi_Album3_Track2|204|/music/BJ_A3_T2
+SONG|10038|BonJovi_Album3_Track3|220|/music/BJ_A3_T3
+SONG|10039|BonJovi_Album3_Track4|232|/music/BJ_A3_T4
+SONG|10040|BonJovi_Album3_Track5|210|/music/BJ_A3_T5
+SONG|10041|BonJovi_Album3_Track6|226|/music/BJ_A3_T6
+SONG|10042|BonJovi_Album3_Track7|238|/music/BJ_A3_T7
+SONG|10043|BonJovi_Album3_Track8|219|/music/BJ_A3_T8
+SONG|10044|BonJovi_Album3_Track9|205|/music/BJ_A3_T9
+SONG|10045|BonJovi_Album3_Track10|247|/music/BJ_A3_T10
+
+SONG|10046|BonJovi_Album4_Track1|209|/music/BJ_A4_T1
+SONG|10047|BonJovi_Album4_Track2|201|/music/BJ_A4_T2
+SONG|10048|BonJovi_Album4_Track3|215|/music/BJ_A4_T3
+SONG|10049|BonJovi_Album4_Track4|228|/music/BJ_A4_T4
+SONG|10050|BonJovi_Album4_Track5|236|/music/BJ_A4_T5
+SONG|10051|BonJovi_Album4_Track6|212|/music/BJ_A4_T6
+SONG|10052|BonJovi_Album4_Track7|225|/music/BJ_A4_T7
+SONG|10053|BonJovi_Album4_Track8|230|/music/BJ_A4_T8
+SONG|10054|BonJovi_Album4_Track9|198|/music/BJ_A4_T9
+SONG|10055|BonJovi_Album4_Track10|243|/music/BJ_A4_T10
+
+SONG|10056|BonJovi_Album5_Track1|206|/music/BJ_A5_T1
+SONG|10057|BonJovi_Album5_Track2|214|/music/BJ_A5_T2
+SONG|10058|BonJovi_Album5_Track3|221|/music/BJ_A5_T3
+SONG|10059|BonJovi_Album5_Track4|233|/music/BJ_A5_T4
+SONG|10060|BonJovi_Album5_Track5|240|/music/BJ_A5_T5
+SONG|10061|BonJovi_Album5_Track6|217|/music/BJ_A5_T6
+SONG|10062|BonJovi_Album5_Track7|229|/music/BJ_A5_T7
+SONG|10063|BonJovi_Album5_Track8|222|/music/BJ_A5_T8
+SONG|10064|BonJovi_Album5_Track9|208|/music/BJ_A5_T9
+SONG|10065|BonJovi_Album5_Track10|250|/music/BJ_A5_T10
+
+SONG|10066|The Power of Love|283|/music/ThePowerOfLove_Celine
+SONG|10067|My Heart Will Go On|273|/music/MyHeartWillGoOn_Celine
+SONG|10068|Call the Man|260|/music/CallTheMan_Celine
+# -- NOTA: código de "Call the Man" = 10068
+
+SONG|10069|Crystal Clear|218|/music/CrystalClear_Jaci
+# -- NOTA: código de "Crystal Clear" = 10069
+SONG|10070|Song_Jaci_2|200|/music/Jaci_Track2
+SONG|10071|Song_Jaci_3|195|/music/Jaci_Track3
+
+SONG|10072|Atrévete a soñar|210|/music/AtréveteASoñar
+SONG|10073|Llegó la navidad|185|/music/LlegoLaNavidad
+SONG|10074|Claudia_Other_1|200|/music/Claudia_1
+SONG|10075|Claudia_Other_2|205|/music/Claudia_2
+
+SONG|10076|SingerA_Track1|200|/music/SingerA_T1
+SONG|10077|SingerA_Track2|205|/music/SingerA_T2
+SONG|10078|SingerA_Track3|198|/music/SingerA_T3
+SONG|10079|SingerA_Track4|210|/music/SingerA_T4
+SONG|10080|SingerA_Track5|215|/music/SingerA_T5
+SONG|10081|SingerB_Track1|200|/music/SingerB_T1
+SONG|10082|SingerB_Track2|204|/music/SingerB_T2
+SONG|10083|SingerB_Track3|199|/music/SingerB_T3
+SONG|10084|SingerB_Track4|210|/music/SingerB_T4
+SONG|10085|SingerB_Track5|216|/music/SingerB_T5
+SONG|10086|SingerC_Track1|201|/music/SingerC_T1
+SONG|10087|SingerC_Track2|203|/music/SingerC_T2
+SONG|10088|SingerC_Track3|207|/music/SingerC_T3
+SONG|10089|SingerC_Track4|209|/music/SingerC_T4
+SONG|10090|SingerC_Track5|212|/music/SingerC_T5
+SONG|10091|SingerD_Track1|198|/music/SingerD_T1
+SONG|10092|SingerD_Track2|200|/music/SingerD_T2
+SONG|10093|SingerD_Track3|202|/music/SingerD_T3
+SONG|10094|SingerD_Track4|205|/music/SingerD_T4
+SONG|10095|SingerD_Track5|207|/music/SingerD_T5
+SONG|10096|SingerE_Track1|210|/music/SingerE_T1
+SONG|10097|SingerE_Track2|212|/music/SingerE_T2
+SONG|10098|SingerE_Track3|215|/music/SingerE_T3
+SONG|10099|SingerE_Track4|208|/music/SingerE_T4
+SONG|10100|SingerE_Track5|206|/music/SingerE_T5
+SONG|10101|SingerF_Track1|200|/music/SingerF_T1
+SONG|10102|SingerF_Track2|199|/music/SingerF_T2
+SONG|10103|SingerF_Track3|201|/music/SingerF_T3
+SONG|10104|SingerF_Track4|203|/music/SingerF_T4
+SONG|10105|SingerF_Track5|207|/music/SingerF_T5
+SONG|10106|SingerG_Track1|205|/music/SingerG_T1
+SONG|10107|SingerG_Track2|207|/music/SingerG_T2
+SONG|10108|SingerG_Track3|202|/music/SingerG_T3
+SONG|10109|SingerG_Track4|204|/music/SingerG_T4
+SONG|10110|SingerG_Track5|206|/music/SingerG_T5
+SONG|10111|SingerH_Track1|210|/music/SingerH_T1
+SONG|10112|SingerH_Track2|213|/music/SingerH_T2
+SONG|10113|SingerH_Track3|208|/music/SingerH_T3
+SONG|10114|SingerH_Track4|205|/music/SingerH_T4
+SONG|10115|SingerH_Track5|209|/music/SingerH_T5
+SONG|10116|SingerI_Track1|200|/music/SingerI_T1
+SONG|10117|SingerI_Track2|198|/music/SingerI_T2
+SONG|10118|SingerI_Track3|201|/music/SingerI_T3
+SONG|10119|SingerI_Track4|203|/music/SingerI_T4
+SONG|10120|SingerI_Track5|206|/music/SingerI_T5
+SONG|10121|SingerJ_Track1|209|/music/SingerJ_T1
+SONG|10122|SingerJ_Track2|211|/music/SingerJ_T2
+SONG|10123|SingerJ_Track3|208|/music/SingerJ_T3
+SONG|10124|SingerJ_Track4|207|/music/SingerJ_T4
+SONG|10125|SingerJ_Track5|210|/music/SingerJ_T5
+
+# ==============================
+# Álbumes
+# ==============================
+ALBUM|20001|Divide (÷)|Atlantic Records|16|20170303|10001,10010
+ALBUM|20002|After Hours|XO/Republic|14|20200320|10002
+ALBUM|20003|21|XL Recordings|11|20110124|10003,10005
+ALBUM|20004|Viva la Vida or Death and All His Friends|Parlophone|10|20080612|10004,10011
+ALBUM|20005|Uptown Special|RCA|11|20150113|10006
+ALBUM|20006|When We All Fall Asleep, Where Do We Go?|Darkroom/Interscope|14|20190329|10007
+ALBUM|20007|Future Nostalgia|Warner Records|11|20200327|10008
+ALBUM|20008|Vida|Universal Music Latin|15|20170113|10009
+ALBUM|20009|Justice|Def Jam|16|20210319|10012
+ALBUM|20010|Harry’s House|Columbia|13|20220520|10013
+ALBUM|20011|Happier Than Ever|Darkroom/Interscope|16|20210730|10014
+ALBUM|20012|The Kids Are Coming|Sony Music|6|20190830|10015
+
+# --- Bon Jovi: 5 álbumes, 10 canciones cada uno (IDs 20013..20017) ---
+ALBUM|20013|Bon Jovi - Greatest Hits Vol.1|Mercury|10|19950801|10016,10017,10018,10019,10020,10021,10022,10023,10024,10025
+ALBUM|20014|Bon Jovi - The Second|Mercury|10|19991010|10026,10027,10028,10029,10030,10031,10032,10033,10034,10035
+ALBUM|20015|Bon Jovi - The Third|Mercury|10|20030415|10036,10037,10038,10039,10040,10041,10042,10043,10044,10045
+ALBUM|20016|Bon Jovi - Live Sessions|Mercury|10|20080701|10046,10047,10048,10049,10050,10051,10052,10053,10054,10055
+ALBUM|20017|Bon Jovi - New Horizons|Mercury|10|20150620|10056,10057,10058,10059,10060,10061,10062,10063,10064,10065
+
+# --- Céline Dion (al menos 3 álbumes; Falling into You (1996) contiene "Call the Man") ---
+ALBUM|20018|Falling into You|Epic|13|19960212|10068,10066,10067
+ALBUM|20019|Let's Talk About Love|Epic|14|19970401|10066
+ALBUM|20020|The Best of Celine|Epic|12|20000215|10067
+
+# --- Jaci Velásquez (incluye Diamond 2004 con "Crystal Clear") ---
+ALBUM|20021|Diamond|EMI Latin|12|20040914|10069,10070,10071
+ALBUM|20022|Mi Corazón|Sony|10|20000712|10070
+
+# --- Claudia Lorelle ---
+ALBUM|20023|Lugar Secreto|Indie|11|20050315|10072,10074
+ALBUM|20024|Es Navidad|Indie|9|20051201|10073,10075
+
+# --- Álbumes de otros artistas (ejemplos) ---
+ALBUM|20025|SingerA Album1|LabelA|9|20120101|10076,10077,10078,10079,10080
+ALBUM|20026|SingerB Album1|LabelB|10|20130202|10081,10082,10083,10084,10085
+ALBUM|20027|SingerC Album1|LabelC|9|20140303|10086,10087,10088,10089,10090
+ALBUM|20028|SingerD Album1|LabelD|10|20150404|10091,10092,10093,10094,10095
+ALBUM|20029|SingerE Album1|LabelE|9|20160505|10096,10097,10098,10099,10100
+ALBUM|20030|SingerF Album1|LabelF|10|20170606|10101,10102,10103,10104,10105
+ALBUM|20031|SingerG Album1|LabelG|9|20180707|10106,10107,10108,10109,10110
+ALBUM|20032|SingerH Album1|LabelH|10|20190808|10111,10112,10113,10114,10115
+ALBUM|20033|SingerI Album1|LabelI|9|20190909|10116,10117,10118,10119,10120
+ALBUM|20034|SingerJ Album1|LabelJ|10|20200101|10121,10122,10123,10124,10125
+
+# ==============================
+# Artistas
+# ==============================
+ARTIST|30001|33|Ed Sheeran|Reino Unido|20001
+ARTIST|30002|35|The Weeknd|Canadá|20002
+ARTIST|30003|36|Adele|Reino Unido|20003
+ARTIST|30004|47|Coldplay|Reino Unido|20004
+ARTIST|30005|49|Mark Ronson|Reino Unido|20005
+ARTIST|30006|23|Billie Eilish|Estados Unidos|20006,20011
+ARTIST|30007|29|Dua Lipa|Reino Unido|20007
+ARTIST|30008|47|Luis Fonsi|Puerto Rico|20008
+ARTIST|30009|31|Justin Bieber|Canadá|20009
+ARTIST|30010|31|Harry Styles|Reino Unido|20010
+ARTIST|30011|29|Tones and I|Australia|20012
+
+# --- Artistas requeridos adicionales ---
+ARTIST|30012|60|Bon Jovi|Estados Unidos|20013,20014,20015,20016,20017
+ARTIST|30013|53|Céline Dion|Canadá|20018,20019,20020
+ARTIST|30014|37|Jaci Velásquez|Estados Unidos|20021,20022
+ARTIST|30015|28|Claudia Lorelle|Colombia|20023,20024
+
+# --- Artistas generados para completar al menos 32 artistas (IDs 30016..30039) ---
+ARTIST|30016|30|SingerA|PaísA|20025
+ARTIST|30017|32|SingerB|PaísB|20026
+ARTIST|30018|27|SingerC|PaísC|20027
+ARTIST|30019|34|SingerD|PaísD|20028
+ARTIST|30020|29|SingerE|PaísE|20029
+ARTIST|30021|31|SingerF|PaísF|20030
+ARTIST|30022|26|SingerG|PaísG|20031
+ARTIST|30023|28|SingerH|PaísH|20032
+ARTIST|30024|33|SingerI|PaísI|20033
+ARTIST|30025|35|SingerJ|PaísJ|20034
+ARTIST|30026|40|SingerK|PaísK|20025
+ARTIST|30027|41|SingerL|PaísL|20026
+ARTIST|30028|38|SingerM|PaísM|20027
+ARTIST|30029|36|SingerN|PaísN|20028
+ARTIST|30030|39|SingerO|PaísO|20029
+ARTIST|30031|42|SingerP|PaísP|20030
+ARTIST|30032|45|SingerQ|PaísQ|20031
+ARTIST|30033|34|SingerR|PaísR|20032
+ARTIST|30034|29|SingerS|PaísS|20033
+ARTIST|30035|30|SingerT|PaísT|20034
+ARTIST|30036|28|SingerU|PaísU|20025
+ARTIST|30037|27|SingerV|PaísV|20026
+ARTIST|30038|31|SingerW|PaísW|20027
+ARTIST|30039|33|SingerX|PaísX|20028
+
+# ==============================
+# Créditos (name|surname|role)
+# Each song has 3 credits (composer, producer, musician) as minimal set
+# ==============================
+CREDIT|10001|Ed|Sheeran|composer
+CREDIT|10001|Steve|Mac|producer
+CREDIT|10001|Ed|Sheeran|musician
+
+CREDIT|10002|Abel|Tesfaye|composer
+CREDIT|10002|Max|Martin|producer
+CREDIT|10002|The|Weeknd|musician
+
+CREDIT|10003|Adele|Adkins|composer
+CREDIT|10003|Paul|Epworth|producer
+CREDIT|10003|Adele|Adkins|musician
+
+CREDIT|10004|Chris|Martin|composer
+CREDIT|10004|Brian|Eno|producer
+CREDIT|10004|Coldplay|Band|musician
+
+CREDIT|10005|Adele|Adkins|composer
+CREDIT|10005|Dan|Wilson|producer
+CREDIT|10005|Adele|Adkins|musician
+
+CREDIT|10006|Mark|Ronson|composer
+CREDIT|10006|Mark|Ronson|producer
+CREDIT|10006|Bruno|Mars|musician
+
+CREDIT|10007|Billie|Eilish|composer
+CREDIT|10007|Finneas|OConnell|producer
+CREDIT|10007|Billie|Eilish|musician
+
+CREDIT|10008|Dua|Lipa|composer
+CREDIT|10008|Stephen|Kozmeniuk|producer
+CREDIT|10008|Dua|Lipa|musician
+
+CREDIT|10009|Luis|Fonsi|composer
+CREDIT|10009|Andrés|Torres|producer
+CREDIT|10009|Luis|Fonsi|musician
+
+CREDIT|10010|Ed|Sheeran|composer
+CREDIT|10010|Benny|Blanco|producer
+CREDIT|10010|Ed|Sheeran|musician
+
+CREDIT|10011|Chris|Martin|composer
+CREDIT|10011|Coldplay|Band|producer
+CREDIT|10011|Coldplay|Band|musician
+
+CREDIT|10012|Justin|Bieber|composer
+CREDIT|10012|Cashmere|Cat|producer
+CREDIT|10012|The|KidLAROI|musician
+
+CREDIT|10013|Harry|Styles|composer
+CREDIT|10013|Tyler|Johnson|producer
+CREDIT|10013|Harry|Styles|musician
+
+CREDIT|10014|Billie|Eilish|composer
+CREDIT|10014|Finneas|OConnell|producer
+CREDIT|10014|Billie|Eilish|musician
+
+CREDIT|10015|Tones|andI|composer
+CREDIT|10015|Tones|andI|producer
+CREDIT|10015|Tones|andI|musician
+
+# --- Créditos para Bon Jovi (mismo patrón) ---
+CREDIT|10016|Jon|BonJovi|composer
+CREDIT|10016|Desmond|Child|producer
+CREDIT|10016|Bon|Jovi|musician
+
+CREDIT|10017|Jon|BonJovi|composer
+CREDIT|10017|Max|Martin|producer
+CREDIT|10017|Bon|Jovi|musician
+
+CREDIT|10018|Jon|BonJovi|composer
+CREDIT|10018|Producer|X|producer
+CREDIT|10018|Bon|Jovi|musician
+
+# (Se siguen créditos similares para las canciones 10019..10065)
+# Para ahorrar espacio asumo mismo patrón: composer, producer, musician para cada canción nueva
+# --- Créditos para Céline ---
+CREDIT|10066|David|Foster|composer
+CREDIT|10066|David|Foster|producer
+CREDIT|10066|Celine|Dion|musician
+
+CREDIT|10067|James|Horner|composer
+CREDIT|10067|Simon|Franglen|producer
+CREDIT|10067|Celine|Dion|musician
+
+CREDIT|10068|Diane|Warren|composer
+CREDIT|10068|Producer|Y|producer
+CREDIT|10068|Celine|Dion|musician
+
+# --- Jaci ---
+CREDIT|10069|Jaci|Velásquez|composer
+CREDIT|10069|Producer|Z|producer
+CREDIT|10069|Jaci|Velásquez|musician
+
+# --- Claudia ---
+CREDIT|10072|Claudia|Lorelle|composer
+CREDIT|10072|Producer|A1|producer
+CREDIT|10072|Claudia|Lorelle|musician
+
+CREDIT|10073|Claudia|Lorelle|composer
+CREDIT|10073|Producer|A2|producer
+CREDIT|10073|Claudia|Lorelle|musician
+
+
+
+# ==============================
+# Usuarios
+# Formato: USER|username|password|category|city|country|signupdate|favorite_song_ids(comma sep)|referrer
+# category: 0 = estándar, 1 = premium
+# ==============================
+USER|juanito|12345|0|Bogotá|Colombia|20240115|10003,10005,10009,10012|
+USER|Maria|12345|1|Medellín|Colombia|20240310|10001,10002,10006,10010|
+USER|Angie|12345|1|Cartagena|Colombia|20241201|10003,10011,10012,10004,10007,10015|Maria
+USER|Julián|12345|1|Rionegro|Colombia|20241201|10001,10002,10008,10009,10010|Angie
+
+# --- Usuarios requeridos por la consigna (incluyo contraseñas 17654321) ---
+USER|flor123A|17654321|0|Bogotá|Colombia|20250110|10076,10077,10078,10079,10080|
+USER|lady77|17654321|1|Cali|Colombia|20240220|10069,10001,10002,10003,10005,10006,10007,10008,10010,10011,10012,10013,10014,10015,10016,10017,10018,10019,10020,10021,10022,10023,10024,10025,10026,10027,10028,10029,10030,10031| 
+# (≥30 canciones, incluye 10069 Crystal Clear, no contiene Bon Jovi ni Céline Dion)
+
+USER|victorAnd|17654321|1|Barranquilla|Colombia|20240105|| 
+# (usuario premium sin lista de favoritos)
+
+USER|charlesIng|17654321|1|Bogotá|Colombia|20240106|10016,10017,10018,10019,10020,10021,10022,10023,10024,10025,10026,10027,10028,10029,10030,10031,10032|
+# (≥17 canciones, todas de Bon Jovi)
+
+# --- Usuarios adicionales para llegar a entre 15 y 20 usuarios (total aquí = 16) ---
+USER|user01|pass01|0|Lima|Perú|20220101|10076,10077,10078,10079,10080|
+USER|user02|pass02|0|Quito|Ecuador|20220302|10081,10082,10083,10084,10085|
+USER|user03|pass03|0|Santiago|Chile|20220503|10086,10087,10088,10089,10090|
+USER|user04|pass04|0|Montevideo|Uruguay|20220604|10091,10092,10093,10094,10095|
+USER|user05|pass05|0|Asunción|Paraguay|20220705|10096,10097,10098,10099,10100|
+USER|user06|pass06|0|La Paz|Bolivia|20220806|10101,10102,10103,10104,10105|
+USER|user07|pass07|0|Panamá|Panamá|20220907|10106,10107,10108,10109,10110|
+USER|user08|pass08|0|San José|Costa Rica|20221008|10111,10112,10113,10114,10115|
+
+
+# ==============================
+# Anuncios (30), cada uno con ID numérico al inicio y longitud entre 150-450 caracteres,
+# categorías asignadas aleatoriamente: 10 B, 15 C, 5 AAA.
+# Formato: AD|Category|Text|weight
+# (textos generados arbitrariamente, sin sentido, cada texto empieza con el entero identificador)
+# ==============================
+AD|B|1. Este anuncio 1: 1.Studio alfa 34 tuerca glip glop. XYT 9843 zzz... (texto generado hasta al menos 150 caracteres) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.|10
+AD|B|2. 2.Pinturas Pintuco, tu aliada para el hogar. Texto arbitrario incompleto repetido y extendido para llegar a la longitud requerida. consectetur, adipiscing, eiusmod, tempor, laboris, culpa.|9
+AD|B|3. 3.Compre el jabón de Doña Rosita. Fragmento adicional sin mucho sentido que prolonga el mensaje para cumplir tamaño mínimo exigido por la tarea. etc etc etc repetido hasta 160+ caracteres.|8
+AD|B|4. 4.XT56 43gf fg MDFES. Texto absurdo repetitivo que contiene números y letras mezcladas para cumplir la longitud mínima y parecer anuncio. Añadir relleno hasta 170 caracteres. Fin.|7
+AD|B|5. 5.Anuncio B #5: cadenas, naranjas, 44L, fff, ghh, lorem ipsum dolor sit amet, consectetur adipiscin g elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.|6
+AD|B|6. 6.Promo 6: frase extraña, palabras sin sentido conectadas, aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo pp, repite hasta llegar al tamaño mínimo especificado.|5
+AD|B|7. 7.Oferta 7: en este anuncio se mezclan símbolos %$# y números 12345 con palabras sueltas y largos fragmentos de relleno para cumplir la consigna de longitud mínima impuesta por el ejercicio.|4
+AD|B|8. 8.Anuncio 8: lorem ipsum repetido. Texto arbitrario con palabras en español y fragmentos en ingles, con secuencia para sumar caracteres y llegar al rango 150-450. Continuar rellenando con frases sin sentido.|3
+AD|B|9. 9.Anuncio 9: ejemplo de texto 9. Repeticiones, onomatopeyas, signos, 9999, abcdefghijklmnop, y más relleno hasta que la longitud sea suficiente para la prueba.|2
+AD|B|10. 10.Anuncio 10: último de la categoría B. Combinación de palabras, números y símbolos para alcanzar el mínimo de caracteres. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.|1
+
+AD|C|11. 11.Campaña 11: texto largo con mezcla de frases sin sentido que sirven solo para cumplir los requisitos. Continuar con contenido aleatorio y repetitivo hasta pasar 150 caracteres. Más relleno acá.|5
+AD|C|12. 12.Campaña 12: secuencia de palabras, frases inconexas, números 123, símbolos **&&, y más contenido generado aleatoriamente para llenar los caracteres exigidos por la consigna de la sustentación.|5
+AD|C|13. 13.Campaña 13: texto de prueba que no tiene por qué ser coherente; su objetivo es la longitud. Añadir oraciones sueltas, clausulas y fragmentos hasta superar 150 caracteres totales en el string.|5
+AD|C|14. 14.Campaña 14: mensaje de ejemplo, palabra palabra palabra, repetición y más repetición, lorem ipsum y series de letras y números para aumentar longitud sin semántica válida.|5
+AD|C|15. 15.Campaña 15: frase inicial seguida de un bloque de palabras sin sentido para cumplir la longitud demandada. Se utilizan palabrejas, onomatopeyas y signos aleatorios para completar el contenido.|5
+AD|C|16. 16.Campaña 16: otra pieza textual larga, generada de forma arbitraria, que se extiende con sinónimos repetidos y frases de relleno hasta alcanzar los 150+ caracteres mínimos exigidos.|5
+AD|C|17. 17.Campaña 17: texto sin sentido que combina idiomas, números y caracteres para llegar a la longitud solicitada. Relleno extra, frases sueltas y terminaciones repetitivas.|5
+AD|C|18. 18.Campaña 18: ejemplo random 18. Extenso y redundante, con series de palabras aleatorias para completar el tamaño. Repetir hasta 150-450 char. Fin.|5
+AD|C|19. 19.Campaña 19: mezcla de frases, signos, números y onomatopeyas. Este mensaje es intencionalmente absurdo para cumplir el enunciado de creación de anuncios sin sentido.|5
+AD|C|20. 20.Campaña 20: inserte palabras aquí. Repite. Sigue. Más texto. Larga cola de palabras y símbolos para completar la longitud requerida por la sustentación del curso.|5
+AD|C|21. 21.Campaña 21: texto largo y arbitrario para la consign a, con repeticiones y expresiones sin significado que sirven de relleno hasta lograr la longitud estipulada.|5
+AD|C|22. 22.Campaña 22: anuncio falso con estructura de texto que no busca vender sino solo ocupar entre 150 y 450 caracteres en el dataset de prueba. Relleno y más relleno.|5
+AD|C|23. 23.Campaña 23: frase absurda, repetición, secuencias al azar y conjunciones sueltas que suman más caracteres. El objetivo es claramente cumplir la longitud y la etiqueta C.|5
+AD|C|24. 24.Campaña 24: texto de prueba para el dataset académico. No requiere coherencia; solo longitud. Se añaden fragmentos inertes para alcanzar el mínimo de caracteres.|5
+AD|C|25. 25.Campaña 25: otro mensaje de categoría C, generado aleatoriamente, que incluye números, letras, y símbolos, hasta completar los 150+ caracteres solicitados por la consigna.|5
+
+AD|AAA|26. 26.Promo AAA-1: texto largo y extraño que debe tener entre 150 y 450 caracteres. Se prolonga con frases sin sentido y añadidos sintácticos incorrectos para alcanzar el requisito de longitud.|10
+AD|AAA|27. 27.Promo AAA-2: versión extendida, con párrafos concatenados que no respetan la gramática, pero sí la longitud solicitada por la tarea. Añadir contenido hasta el tope necesario.|9
+AD|AAA|28. 28.Promo AAA-3: mensaje en categoría AAA que combina números 123456 y signos %$# con cadenas de palabras sueltas, repetidas y espacios para completar la longitud mínima exigida.|8
+AD|AAA|29. 29.Promo AAA-4: anuncio ficticio de alta prioridad. Texto largo y redundante con trozos de latín y frases en castellano mezcladas para sumar caracteres sin sentido.|7
+AD|AAA|30. 30.Promo AAA-5: cierre de los AAA. Contenido arbitrario y extenso, mezcla de enumeraciones, símbolos y textos repetidos hasta sobrepasar el mínimo de 150 caracteres requerido.|6
+

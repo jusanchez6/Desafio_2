@@ -142,11 +142,12 @@ void Database::loadFromFile(const std::string &filename)
 
         else if (token == "USER")
         {
-            std::string name, city, country, favStr, followName, value;
+            std::string name, pass, city, country, favStr, followName, value;
             bool premium;
             int date;
 
             std::getline(ss, name, '|');
+            std::getline(ss, pass, '|');
             std::getline(ss, value, '|');
             premium = std::stoi(value);
             std::getline(ss, city, '|');
@@ -156,7 +157,7 @@ void Database::loadFromFile(const std::string &filename)
             std::getline(ss, favStr, '|');
             std::getline(ss, followName, '|');
 
-            User *u = new User(name, premium, city, country, date);
+            User *u = new User(name, pass, premium, city, country, date);
 
             // Agregar favoritos
             std::stringstream favs(favStr);
@@ -248,8 +249,8 @@ void Database::loadDummyData()
     artists.push_back(art1);
 
     // Usuarios
-    User *u1 = new User("juanito", false, "Bogotá", "Colombia", 20240115);
-    User *u2 = new User("Maria", true, "Medellín", "Colombia", 20240310);
+    User *u1 = new User("juanito", "juanito", false, "Bogotá", "Colombia", 20240115);
+    User *u2 = new User("Maria", "juanito", true, "Medellín", "Colombia", 20240310);
 
     u1->addFavorite(s3);
     u2->addFavorite(s1);
