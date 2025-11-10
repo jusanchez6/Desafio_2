@@ -47,7 +47,7 @@ private:
     /**
      * @brief Muestra el menú de inicio de sesión.
      */
-    void loginMenu();
+    bool loginMenu();
 
     /**
      * @brief Inicia la sesión del usuario autenticado.
