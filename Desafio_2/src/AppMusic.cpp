@@ -6,31 +6,28 @@
  * menú de login y sesiones de usuario.
  * @authors Julián Sánchez
  *          Jaider Bedoya
- * 
+ *
  * @version 1.0.0
  */
 #include <AppMusic.hpp>
 
 AppMusic::AppMusic() : currentUser(nullptr) {}
 
-void AppMusic::loginMenu()
+bool AppMusic::loginMenu()
 {
-    Counter iterCount;      // Contador de iteraciones
+    Counter iterCount; // Contador de iteraciones
 
     std::cout << "====== Inicio de Sesión ======\n";
-    std::cout << "Usuarios disponibles: \n";
+    std::cout << "Usuarios disponibles:\n";
 
     // Mostrar los usuarios
     for (size_t i = 0; i < db.getUsers().getSize(); ++i)
     {
-        iterCount.increment();      // Aumentar el contador
-
+        iterCount.increment();
         User *u = db.getUsers()[i];
         std::cout << i + 1 << ". " << u->getNick();
         if (u->isPremium())
-        {
             std::cout << " (Premium)";
-        }
         std::cout << "\n";
     }
 
@@ -42,25 +39,42 @@ void AppMusic::loginMenu()
     {
         std::cout << "Opción inválida.\n";
         currentUser = nullptr;
-        return;
+        return false;
     }
+
+    std::string pass;
+    std::cout << "Ingrese la contraseña: ";
+    std::cin >> pass;
+
     currentUser = db.getUsers()[opt - 1];
-    std::cout << "\n=======================\n"
-              << "Bienvenido, " << currentUser->getNick() << "!\n";
 
-    
-    iterCount.showMetrics("LoginMenu(): ");
-    MemoryTracker::showCurrentUsage("LongiMenu(): ");
-
-    
-
+    if (currentUser->getPass() == pass)
+    {
+        std::cout << "\n=======================\n"
+                  << "Bienvenido, " << currentUser->getNick() << "!\n"
+                  << "=======================\n";
+        iterCount.showMetrics("LoginMenu(): ");
+        MemoryTracker::showCurrentUsage("LoginMenu(): ");
+        return true; // ✅ éxito
+    }
+    else
+    {
+        std::cout << "\n=======================\n"
+                  << "Contraseña inválida, intente de nuevo.\n"
+                  << "=======================\n";
+        currentUser = nullptr;
+        iterCount.showMetrics("LoginMenu(): ");
+        MemoryTracker::showCurrentUsage("LoginMenu(): ");
+        return false; // ❌ contraseña incorrecta
+    }
 }
 
 void AppMusic::runPlayback(User *user, bool playFavorites)
 {
     Counter iterCount;
 
-    if (!user->isPremium() && playFavorites) {
+    if (!user->isPremium() && playFavorites)
+    {
         std::cout << "\n Esta funcionalidad es solo para Usuarios Premium.\n";
         return;
     }
@@ -80,33 +94,37 @@ void AppMusic::runPlayback(User *user, bool playFavorites)
     MemoryTracker::showCurrentUsage("Memoria Usada en runPlayback()");
 }
 
-void AppMusic::showFavorites(User* user) {
+void AppMusic::showFavorites(User *user)
+{
 
     Counter iterCount;
 
+    if (!user)
+        return;
 
-    if (!user) return;
-
-    if (user->getFavoriteCount() == 0) {
+    if (user->getFavoriteCount() == 0)
+    {
         std::cout << "No hay canciones favoritas.\n";
         return;
     }
 
     std::cout << "\n=== Canciones favoritas de " << user->getNick() << " ===\n";
 
-    for (size_t i = 0; i < user->getFavoriteCount(); ++i) {
+    for (size_t i = 0; i < user->getFavoriteCount(); ++i)
+    {
 
         iterCount.increment();
 
-        Song* s = user->getFavorite(i);
-        const auto& musicians = s->getMusicians();
-        
-        if (!s) 
+        Song *s = user->getFavorite(i);
+        const auto &musicians = s->getMusicians();
+
+        if (!s)
             continue;
 
         std::cout << " - " << s->getName();
-        
-        if (musicians.getSize() > 0) {
+
+        if (musicians.getSize() > 0)
+        {
 
             iterCount.increment();
 
@@ -118,11 +136,10 @@ void AppMusic::showFavorites(User* user) {
     // === Métricas ===
     iterCount.showMetrics("showFavorites()");
     MemoryTracker::showCurrentUsage("Memoria usada en showFavorites()");
-
 }
 
-
-void AppMusic::editFavorites(User* user) {
+void AppMusic::editFavorites(User *user)
+{
     Counter iterCount;
 
     std::cout << "\n=== Editar mi lista de favoritos ===\n";
@@ -130,10 +147,11 @@ void AppMusic::editFavorites(User* user) {
     std::cout << "Ingrese el ID de la canción a buscar: ";
     std::cin >> songId;
 
-    Song* song = db.findSong(songId);
+    Song *song = db.findSong(songId);
     iterCount.increment();
 
-    if(!song) {
+    if (!song)
+    {
         std::cout << "Canción no encontrada.\n";
         iterCount.showMetrics("Editar favoritos - Búsqueda fallida");
         return;
@@ -144,57 +162,73 @@ void AppMusic::editFavorites(User* user) {
     int opt;
     std::cin >> opt;
 
-
-    if (opt == 1) {
-        if (user->getFavoriteCount() >= 10000) {
+    if (opt == 1)
+    {
+        if (user->getFavoriteCount() >= 10000)
+        {
             std::cout << "Ha alcanzado el límite máximo de canciones favoritas (10000).\n";
-        } else if (user->isFavorite(song)) {
+        }
+        else if (user->isFavorite(song))
+        {
             std::cout << "La canción ya está en su lista.\n";
-        } else {
+        }
+        else
+        {
             user->addFavorite(song);
             std::cout << "Canción agregada a favoritos.\n";
         }
-    } else if (opt == 2) {
-        if (!user->isFavorite(song)) {
+    }
+    else if (opt == 2)
+    {
+        if (!user->isFavorite(song))
+        {
             std::cout << "La canción no estaba en su lista.\n";
-        } else {
+        }
+        else
+        {
             user->removeFavorite(song);
             std::cout << "Canción eliminada de favoritos.\n";
         }
-    } else {
+    }
+    else
+    {
         std::cout << "Opción inválida.\n";
     }
 
     iterCount.showMetrics("Editar mi lista de favoritos");
     MemoryTracker::showReport();
-
 }
 
-void AppMusic::followOtherList(User* user) {
+void AppMusic::followOtherList(User *user)
+{
     Counter iterCount;
     std::cout << "\n=== Seguir la lista de otro usuario ===\n";
     std::cout << "Ingrese el nombre del usuario a seguir: ";
     std::string nick;
     std::cin >> nick;
 
-    User* other = db.findUser(nick);
+    User *other = db.findUser(nick);
     iterCount.increment();
 
-    if (!other) {
+    if (!other)
+    {
         std::cout << "Usuario no encontrado.\n";
         iterCount.showMetrics("Seguir lista - Usuario no existe");
         return;
     }
 
-    if (other == user) {
+    if (other == user)
+    {
         std::cout << "No puede seguirse a sí mismo.\n";
         iterCount.showMetrics("Seguir lista - Operación invalida");
         return;
     }
 
-    for (size_t i = 0; i < other->getFavoriteCount(); ++i) {
-        Song* song = other->getFavorite(i);
-        if (song && !user->isFavorite(song)) {
+    for (size_t i = 0; i < other->getFavoriteCount(); ++i)
+    {
+        Song *song = other->getFavorite(i);
+        if (song && !user->isFavorite(song))
+        {
             user->addFavorite(song);
         }
         iterCount.increment();
@@ -205,11 +239,12 @@ void AppMusic::followOtherList(User* user) {
     MemoryTracker::showReport();
 }
 
-
-void AppMusic::executeFavorites(User* user) {
+void AppMusic::executeFavorites(User *user)
+{
     Counter iterCount;
 
-    if (user->getFavoriteCount() == 0) {
+    if (user->getFavoriteCount() == 0)
+    {
         std::cout << "No tiene canciones en su lista de favoritos.\n";
         return;
     }
@@ -232,19 +267,22 @@ void AppMusic::executeFavorites(User* user) {
     MemoryTracker::showReport();
 }
 
-
-void AppMusic::manageFavorites(User* user) {
-    if (!user) {
+void AppMusic::manageFavorites(User *user)
+{
+    if (!user)
+    {
         return;
     }
 
-    if (!user->isPremium()) {
+    if (!user->isPremium())
+    {
         std::cout << "\nEsta funcionalidad solo está disponible para usuarios premium.\n";
         return;
     }
 
     int opt;
-    do {
+    do
+    {
         std::cout << "\n====== Mi lista de favoritos ======\n";
         std::cout << "1. Editar mi lista de favoritos\n";
         std::cout << "2. Seguir lista de otro usuario\n";
@@ -254,35 +292,38 @@ void AppMusic::manageFavorites(User* user) {
         std::cout << "Seleccione una opción: ";
         std::cin >> opt;
 
-        switch (opt) {
-            case 1:
-                editFavorites(user);
-                break;
-            case 2:
-                followOtherList(user);
-                break;
-            case 3:
-                executeFavorites(user);
-                break;
-            case 4:
-                std::cout << "Volviendo al menú principal...\n";
-                break;
-            default:
-                std::cout << "Opción inválida.\n";
-                break;
+        switch (opt)
+        {
+        case 1:
+            editFavorites(user);
+            break;
+        case 2:
+            followOtherList(user);
+            break;
+        case 3:
+            executeFavorites(user);
+            break;
+        case 4:
+            std::cout << "Volviendo al menú principal...\n";
+            break;
+        default:
+            std::cout << "Opción inválida.\n";
+            break;
         }
     } while (opt != 4);
-
 }
 
-void AppMusic::userSession() {
+void AppMusic::userSession()
+{
 
     Counter iterCount;
 
-    if (!currentUser) return;
+    if (!currentUser)
+        return;
 
     int opcion;
-    do {
+    do
+    {
 
         iterCount.increment();
 
@@ -297,14 +338,29 @@ void AppMusic::userSession() {
         std::cout << "Seleccione una opción: ";
         std::cin >> opcion;
 
-        switch (opcion) {
-            case 1: currentUser->show(); break;
-            case 2: showFavorites(currentUser); break;
-            case 3: runPlayback(currentUser, true); break;
-            case 4: runPlayback(currentUser, false); break;
-            case 5: manageFavorites(currentUser); break;
-            case 6: std::cout << "Sesión cerrada.\n"; break;
-            default: std::cout << "Opción inválida.\n"; break;
+        switch (opcion)
+        {
+        case 1:
+            currentUser->show();
+            break;
+        case 2:
+            showFavorites(currentUser);
+            break;
+        case 3:
+            runPlayback(currentUser, true);
+            break;
+        case 4:
+            runPlayback(currentUser, false);
+            break;
+        case 5:
+            manageFavorites(currentUser);
+            break;
+        case 6:
+            std::cout << "Sesión cerrada.\n";
+            break;
+        default:
+            std::cout << "Opción inválida.\n";
+            break;
         }
 
     } while (opcion != 6);
@@ -327,10 +383,18 @@ void AppMusic::run()
     iterCount.increment();
 
     // 2. Menú de usuarios
-    loginMenu();
-    iterCount.increment();
+    bool session_valid = false;
 
-    if(!currentUser) {
+    do
+    {
+        session_valid = loginMenu();
+        iterCount.increment();
+
+    } while (!session_valid);
+
+
+    if (!currentUser)
+    {
         return;
     }
 
@@ -342,7 +406,4 @@ void AppMusic::run()
     MemoryTracker::showReport();
     iterCount.showMetrics("AppMusic::run()");
     MemoryTracker::showCurrentUsage("Memoria total al finalizar AppMusic::run()");
-
-
-
 }

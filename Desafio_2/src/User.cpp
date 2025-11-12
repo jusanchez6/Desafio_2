@@ -12,8 +12,8 @@
  */
 #include <User.hpp>
 
-User::User(const std::string& nick, bool premiumStatus, const std::string& city, const std::string& country, unsigned int signup_date) 
-: nickname(nick), premium(premiumStatus), city(city), country(country), signup_date(signup_date), following(nullptr)
+User::User(const std::string& nick, const std::string& pass, bool premiumStatus, const std::string& city, const std::string& country, unsigned int signup_date) 
+: nickname(nick), password(pass), premium(premiumStatus), city(city), country(country), signup_date(signup_date), following(nullptr)
 {
 }
 
@@ -91,6 +91,7 @@ void User::removeFavorite(Song* s)
 
 bool User::isPremium() const {return premium; }
 const std::string& User::getNick() const {return nickname; }
+const std::string& User::getPass() const {return password; }
 const std::string& User::getCity() const {return city; }
 const std::string& User::getCountry() const {return country; }
 unsigned int User::getSignupDate() const {return signup_date; }

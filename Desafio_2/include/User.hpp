@@ -32,6 +32,7 @@ class User
 {
 private:
     std::string nickname;               ///< Apodo del usuario.
+    std::string password;
     bool premium;                       ///< Indica si el usuario tiene cuenta premium.
     std::string city;                   ///< Ciudad de residencia del usuario.
     std::string country;                ///< País de residencia del usuario.
@@ -51,7 +52,7 @@ public:
      * @param country País de residencia.
      * @param signup_date Fecha de registro.
      */
-    User(const std::string& nick, bool premiumStatus, const std::string& city, const std::string& country, unsigned int signup_date);
+    User(const std::string& nick, const std::string& pass, bool premiumStatus, const std::string& city, const std::string& country, unsigned int signup_date);
 
     /**
      * @brief Destructor del usuario.
@@ -102,6 +103,8 @@ public:
      * @return Referencia constante al nickname.
      */
     const std::string& getNick() const;
+
+    const std::string& getPass() const;
 
     /**
      * @brief Obtiene la ciudad del usuario.
